@@ -1,16 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+import { BrowserRouter } from 'react-router-dom';
+import 'antd/dist/antd.css';
+import { EthereumProviderProvider } from 'context/EthereumProviderContext';
+import { KaikasProviderProvider } from 'context/KaikasProviderContext';
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <BrowserRouter>
+      <EthereumProviderProvider>
+        <KaikasProviderProvider>
+          <App />
+        </KaikasProviderProvider>
+      </EthereumProviderProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root') as HTMLElement
 );
 
 // If you want to start measuring performance in your app, pass a function

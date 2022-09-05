@@ -1,0 +1,63 @@
+@use '../../scss/' as *;
+.connect {
+  color: #ffa467;
+  cursor: pointer;
+  border: 1px solid #ffa467;
+  padding: 11px 12px;
+  border-radius: $border-radius-14;
+}
+
+.ant-modal-content {
+  border-radius: $border-radius-16 !important;
+  background-color: #191a1c !important;
+}
+
+.modal-connect {
+  @include flex(center, center, column);
+  &__text {
+    @include flex(center, center, column);
+    span:nth-child(1) {
+      font-weight: $font-weight-2;
+      font-size: 18px;
+      padding-bottom: 16px;
+      color: $white;
+    }
+    span:nth-child(2) {
+      font-size: $font-size-1;
+      font-weight: $font-weight-1;
+      text-align: center;
+      padding-bottom: 32px;
+      color: #b4b7c0;
+    }
+  }
+
+  .kaikas {
+    background: #665a49;
+    width: 272px;
+    height: 44px;
+    @include flex(center, center, row);
+    border-radius: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    span {
+      color: $white;
+      padding-left: 9px;
+      font-size: $font-size-1;
+      font-weight: $font-weight-1;
+    }
+  }
+  .metamask {
+    background: #000000;
+    @include flex(center, center, row);
+    width: 272px;
+    height: 44px;
+    border-radius: $border-radius-14;
+    cursor: pointer;
+    span {
+      color: $white;
+      padding-left: 9px;
+      font-size: $font-size-1;
+      font-weight: $font-weight-1;
+    }
+  }
+}

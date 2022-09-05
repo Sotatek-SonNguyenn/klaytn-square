@@ -1,0 +1,14 @@
+@use '../../scss/' as *;
+.footer {
+  .Col-2 {
+    @include flex(center, center, row);
+    .content-footer {
+      padding-right: 12px;
+      span:nth-child(1) {
+      }
+      span:nth-child(2) {
+        color: #b4b7c0;
+      }
+    }
+  }
+}
